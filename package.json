@@ -13,7 +13,10 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@expo/vector-icons": "^14.0.0",
+    "@mui/joy": "^5.0.0-beta.32",
     "@react-navigation/native": "^6.0.2",
     "expo": "~50.0.14",
     "expo-font": "~11.10.3",
