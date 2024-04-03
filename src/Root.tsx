@@ -8,7 +8,7 @@ import App from './App'
 
 export const Root = () => {
   return (
-    <TamaguiProvider config={config} defaultTheme="light">
+    <TamaguiProvider config={config} defaultTheme="dark" >
       <App />
     </TamaguiProvider>
   )

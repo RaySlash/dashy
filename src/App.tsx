@@ -4,7 +4,10 @@ import Files from './components/Files';
 
 export default function App() {
   return (
-    <XStack>
+    <XStack
+      minHeight="100vh"
+      minWidth="100vw"
+    >
       <NavBar />
       <Files />
     </XStack>

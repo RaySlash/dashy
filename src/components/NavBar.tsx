@@ -4,8 +4,10 @@ import { BarChartBig, Boxes, Folder, HelpCircle, Home, Settings, StepBack } from
 export default function NavBar() {
   return (
     <YStack
+      maxWidth="25%"
       margin="$4"
-      flexWrap="nowrap"
+      flex={1}
+      justifyContent="space-between"
     >
       <UserInfo />
       <Content />
@@ -18,10 +20,7 @@ function UserInfo() {
   const avatar = "https://images.unsplash.com/photo-1595871465907-19020bb76ad1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mnw5NDUyNDk0fHxlbnwwfHx8fHw\%3D";
 
   return (
-    <XStack
-      gap="$2"
-      justifyContent="center"
-    >
+    <XStack gap="1rem">
       <Avatar circular size="$5">
         <Avatar.Image source={avatar} />
         <Avatar.Fallback bc="blue" />
@@ -38,12 +37,12 @@ function UserInfo() {
           >
             Susie Doe
           </Text>
-          <Button
+          <NavButton
             size="$1"
             backgroundColor="transparent"
             icon={<StepBack size="$1" />}
           >
-          </Button>
+          </NavButton>
         </XStack>
         <Text color="grey">susiedoe@example.com</Text>
       </YStack>
@@ -53,21 +52,37 @@ function UserInfo() {
 
 function Content() {
   return (
-    <YStack>
-      <Button icon={Home}>Home</Button>
-      <Button icon={Boxes}>All Projects</Button>
-      <Button icon={Folder}>Project Files</Button>
-      <Button icon={BarChartBig}>Analysis</Button>
+    <YStack
+      gap="$4"
+    >
+      <NavButton icon={Home} text="Home" ></NavButton>
+      <NavButton icon={Boxes} text="Projects" ></NavButton>
+      <NavButton icon={Folder} text="Project Files" ></NavButton>
+      <NavButton icon={BarChartBig} text="Analysis" ></NavButton>
     </YStack>
   );
 }
 
 function Config() {
   return (
-    <YStack>
-      <Button icon={HelpCircle}>Support</Button>
-      <Button icon={Settings}>Settings</Button>
+    <YStack
+      gap="$2"
+    >
+      <NavButton icon={HelpCircle} text="Support" ></NavButton>
+      <NavButton icon={Settings} text="Settings" ></NavButton>
     </YStack>
 
+  );
+}
+
+function NavButton(props: { icon: any, text: string }) {
+  return (
+    <Button
+      icon={props.icon}
+      backgroundColor="transparent"
+      hoverBackgroundColor="grey"
+    >
+      {props.text}
+    </Button>
   );
 }
