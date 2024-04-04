@@ -23,14 +23,10 @@ export function LoginScreen() {
         Log In
       </SizableText>
       <Separator alignSelf="stretch" horizontal />
-      <XStack ai="center" gap="$2">
-        <SizableText size="$4">Username:</SizableText>
-        <Input size="$2" borderWidth={2} />
-      </XStack>
-      <XStack ai="center" gap="$2">
-        <SizableText size="$4">Password:</SizableText>
-        <Input size="$2" borderWidth={2} />
-      </XStack>
+      <YStack ai="center" gap="$2" alignSelf='stretch'>
+        <Input size="$4" borderWidth={2} placeholder='Username' />
+        <Input size="$4" borderWidth={2} placeholder='Password' />
+      </YStack>
       <XStack ai="center" gap="$4">
         <Button {...linkDash}>Log In</Button>
         <Button>Sign Up</Button>
