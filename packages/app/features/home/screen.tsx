@@ -18,7 +18,7 @@ export function HomeScreen() {
         Dashy
       </SizableText>
       <Separator alignSelf="stretch" horizontal />
-      <SizableText size="$4">I am an awsome dashboard.</SizableText>
+      <SizableText size="$4">I am an awesome dashboard.</SizableText>
       <Button {...linkLogin}>Log In</Button>
     </YStack>
   )
